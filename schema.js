@@ -89,7 +89,7 @@ const resolvers = {
       }
       session.user = {
         ...session.user,
-        lessons: user.lessons.filter((lesson) => lesson.title !== title),
+        lessons: session.user.lessons.filter((lesson) => lesson.title !== title),
       };
 
       return session.user;
